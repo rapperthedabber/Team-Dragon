@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "team-dragon",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
