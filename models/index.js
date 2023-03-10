@@ -5,17 +5,16 @@ const user = require('./user');
 
 // name belongs to friends
 name.belongsTo(friends, {
-    foreignKey: 'friends_id'
-})
+  foreignKey: 'friends_id',
+});
 
-//user has many friends
+// user has many friends
 user.hasMany(friends, {
-    foreignKey: 'user_id'
-
-})
+  foreignKey: 'user_id',
+});
 
 module.exports = {
-    friends,
-    name,
-    user
-}
+  friends,
+  name,
+  user,
+};
