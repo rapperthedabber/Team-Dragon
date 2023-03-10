@@ -1,5 +1,5 @@
 
-DB_NAME=
+DB_NAME= 'friends_db'
 DB_USER=
 DB_PW=
 
