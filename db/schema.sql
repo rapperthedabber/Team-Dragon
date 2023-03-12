@@ -1,8 +1,7 @@
+DROP DATABASE IF EXISTS group_cards;
+CREATE DATABASE group_cards;
 
-DROP DATABASE IF EXISTS friends_db;
-CREATE DATABASE friends_db;
-
-USE friends_db
+USE group_cards;
 
 CREATE TABLE note_cards(
 id INT NOT NUll,
