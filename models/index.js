@@ -1,20 +1,21 @@
 // const sequelize = require('../config/connection');
-const friends = require('./friends');
+const Description = require('./Description');
+//const friends = require('./Description');
 const name = require('./name');
 const user = require('./user');
 
 // name belongs to friends
-name.belongsTo(friends, {
-  foreignKey: 'friends_id',
+user.belongsTo(Description, {
+  foreignKey: 'user_id',
 });
 
 // user has many friends
-user.hasMany(friends, {
+user.hasOne(name, {
   foreignKey: 'user_id',
 });
 
 module.exports = {
-  friends,
+  Description,
   name,
   user,
 };
