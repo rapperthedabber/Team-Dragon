@@ -1,0 +1,19 @@
+body {
+    background-color: lightskyblue;
+}
+
+.nav{ 
+    background-color:  chartreuse;
+}
+
+.form{
+    margin: 100px;
+    margin-bottom: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+span {
+  font-size: 300px;
+  margin-left: 900px;
+  
+}
