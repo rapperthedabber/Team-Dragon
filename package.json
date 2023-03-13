@@ -1,4 +1,23 @@
 {
+  "name": "team-dragon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rapperthedabber/Team-Dragon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rapperthedabber/Team-Dragon/issues"
+  },
+  "homepage": "https://github.com/rapperthedabber/Team-Dragon#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.5",
@@ -9,21 +28,8 @@
     "express-session": "^1.17.3",
     "handlebars": "^4.7.7",
     "hbs": "^4.2.0",
-    "inquirer": "^8.0.0",
     "mysql2": "^3.2.0",
     "nodemon": "^2.0.21",
     "sequelize": "^6.29.2"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\"&& exit 1",
-    "dev": "nodemon server.js"
-  },
-  "name": "team-dragon",
-  "description": "",
-  "version": "1.0.0",
-  "main": "server.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
