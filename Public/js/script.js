@@ -77,7 +77,7 @@ async function goToForm(event) {
   //       password: passwordValue,
   //     };
 event.preventDefault();
-  const response = await fetch('/api/login', {
+  const response = await fetch('/login', {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' },
   });
