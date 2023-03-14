@@ -1,5 +1,5 @@
 const createUser = document.getElementById('signup');
-
+const form = document.querySelector('.form');
 const login = document.getElementById('login');
 
 async function newUser(event) {
@@ -23,8 +23,9 @@ async function newUser(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/test');
       alert('sign up successful');
+      console.log(signUpData)
     } else {
       alert('Failed to sign up');
     }
@@ -49,13 +50,13 @@ async function loginUser(event) {
     };
 
     const response = await fetch('/api/users/login', {
-      method: 'POST',
+      method: 'GET',
       body: JSON.stringify(signUpData),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/test');
+      document.location.replace('/webpage');
       alert('login successful');
     } else {
       alert('Failed to login');

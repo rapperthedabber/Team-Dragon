@@ -11,4 +11,9 @@ router.get('/login', async (req, res) => {
   res.render('login');
 });
 
+router.get('/webpage', async (req, res) => {
+  res.render('webpage');
+});
+
+
 module.exports = router;
