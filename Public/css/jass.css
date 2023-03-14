@@ -1,5 +1,7 @@
 body {
     background-color: lightskyblue;
+    flex-wrap: wrap;
+    margin:auto
 }
 
 .nav{ 
@@ -15,5 +17,6 @@ body {
 span {
   font-size: 300px;
   margin-left: 900px;
+ flex-wrap: wrap;
   
 }
