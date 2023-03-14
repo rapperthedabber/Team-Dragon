@@ -62,7 +62,6 @@ async function loginUser(event) {
       alert('Failed to login');
     }
   }
-  form.reset();
 }
 
 login.addEventListener('click', loginUser);

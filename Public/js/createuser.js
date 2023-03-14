@@ -1,6 +1,6 @@
 const createBtn = document.querySelector('.Create-btn');
 
-async function createUser(event) {
+async function makeUser(event) {
   event.preventDefault();
   console.log('you signed up');
   const nameValue = document.getElementById('name').value.trim();
@@ -21,14 +21,14 @@ async function createUser(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/test');
+      document.location.replace('/webpage');
       alert('created user successfully');
       console.log(signUpData);
     } else {
       alert('Failed to create user');
     }
   }
-  form.reset();
+
 }
 
-createBtn.addEventListener('click', createUser);
+createBtn.addEventListener('click', makeUser);
