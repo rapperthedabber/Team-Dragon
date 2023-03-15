@@ -10,8 +10,23 @@
 .form-input {
     width: 200px;
     height: 200px;
+ 
 }
 
 .formName {
-    width:200px
+    width:200px;
+
+}
+
+@media screen and (min-width: 480px) {
+   .form-input {
+    width: 200px;
+    height: 200px;
+        float:left;
+    }
+
+    .formName{
+        width:200px;
+         
+    }
 }
