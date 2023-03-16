@@ -76,4 +76,7 @@ This project is graded based on the following criteria:
 * Every group member should speak during the presentation.
 * Your presentation should follow the [Project Presentation Template.](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit#slide=id.p)
 
-##
+## Collaboration 10%
+* There are no major disparities in the number of GitHub contributions between group members.
+
+
