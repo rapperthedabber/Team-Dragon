@@ -24,12 +24,6 @@ async function makeUser(event) {
       document.location.replace('/');
       alert('created user successfully');
       console.log(signUpData);
-      const url = 'https://random-d.uk/api/v2/random';
-      fetch(url)
-        .then((data) => data.json())
-        .then((data) => {
-          console.log(data);
-        });
     }
   } else {
     alert('Failed to create user');

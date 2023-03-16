@@ -10,9 +10,9 @@ if (process.env.JAWSDB_URL) {
     // process.env.DB_NAME,
     // process.env.DB_USER,
     // process.env.DB_PW,
-    'group_cards',
-    'root',
-    'Migda1ia?',
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PW,
     {
       host: 'localhost',
       dialect: 'mysql',
