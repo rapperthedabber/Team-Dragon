@@ -21,14 +21,19 @@ async function makeUser(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/webpage');
+      document.location.replace('/');
       alert('created user successfully');
       console.log(signUpData);
-    } else {
-      alert('Failed to create user');
+      const url = 'https://random-d.uk/api/v2/random';
+      fetch(url)
+        .then((data) => data.json())
+        .then((data) => {
+          console.log(data);
+        });
     }
+  } else {
+    alert('Failed to create user');
   }
-
 }
 
 createBtn.addEventListener('click', makeUser);

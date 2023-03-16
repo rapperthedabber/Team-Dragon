@@ -1,6 +1,6 @@
 // const { response } = require("express");
 //const form = document.querySelector('.form');
-//const login = document.getElementById('login');
+const login = document.getElementById('login');
 const userLoginSignup = document.querySelector('.login-signup');
 //const createUser = document.getElementById('signup');
 
@@ -30,6 +30,6 @@ event.preventDefault();
 }
 
 
-//login.addEventListener('click', loginUser);
+login.addEventListener('click', loginUser);
 //createUser.addEventListener('click', newUser);
 userLoginSignup.addEventListener('click', goToForm);
