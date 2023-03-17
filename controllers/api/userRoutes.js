@@ -34,7 +34,7 @@ router.post('/login', async (req, res) => {
       res.status(400).json({ message: 'password sucks' });
       return;
     }
-console.log(userData);
+    console.log(userData);
     req.session.save(() => {
       req.session.user_id = userData.dataValues.id;
       req.session.loggedIn = true;

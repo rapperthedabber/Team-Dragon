@@ -1,10 +1,8 @@
 // const { response } = require("express");
-//const form = document.querySelector('.form');
+// const form = document.querySelector('.form');
 const login = document.getElementById('login');
 const userLoginSignup = document.querySelector('.login-signup');
-//const createUser = document.getElementById('signup');
-
-
+// const createUser = document.getElementById('signup');
 
 async function goToForm(event) {
   //   if (usernameValue && passwordValue) {
@@ -15,7 +13,7 @@ async function goToForm(event) {
   //       user_name: usernameValue,
   //       password: passwordValue,
   //     };
-event.preventDefault();
+  event.preventDefault();
   const response = await fetch('/login', {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' },
@@ -29,7 +27,6 @@ event.preventDefault();
   }
 }
 
-
 login.addEventListener('click', loginUser);
-//createUser.addEventListener('click', newUser);
+// createUser.addEventListener('click', newUser);
 userLoginSignup.addEventListener('click', goToForm);

@@ -4,25 +4,39 @@ const profile1 = document.getElementById('profile1');
 const profile2 = document.getElementById('profile2');
 const description1 = document.getElementById('description1');
 const description2 = document.getElementById('description2');
-const description1Half = document.getElementById('description1.5')
-const description2Half = document.getElementById('description2.5')
+const description1Half = document.getElementById('description1.5');
+const description2Half = document.getElementById('description2.5');
 
-function seeProfiles() {
+async function seeProfiles() {
   const url = 'https://animechan.vercel.app/api/random';
   fetch(url)
     .then((data) => data.json())
     .then((data) => {
       console.log(data);
-      const anime = data.anime
-      const quote = data.quote
+      const { anime } = data;
+      const { quote } = data;
       description1.textContent = JSON.stringify(anime);
       description1Half.textContent = JSON.stringify(quote);
       description2.textContent = JSON.stringify(anime);
-      description2Half.textContent = JSON.stringify(quote)
-      
-    
-      
+      description2Half.textContent = JSON.stringify(quote);
     });
 }
 
+async function seeName() {
+  const usernameValue = document.getElementById('username').value.trim();
+  const passwordValue = document.getElementById('password').value.trim();
+  const signUpData = {
+    user_name: usernameValue,
+  };
+  const response = await fetch('/api/users/', {
+    method: 'GET',
+    body: JSON.stringify(signUpData),
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (response.ok) {
+    profile1.textContent = JSON.stringify(response);
+  }
+}
 seeProfiles();
+seeName();

@@ -13,7 +13,6 @@ async function makeUser(event) {
       user_name: nameValue,
       password: descriptionValue,
     };
-
     const response = await fetch('/api/users/', {
       method: 'POST',
       body: JSON.stringify(signUpData),
