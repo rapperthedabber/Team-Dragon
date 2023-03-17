@@ -1,7 +1,5 @@
 const sequelize = require('../config/connection');
-
-const sequelize = require('../config/connection');
-const { user , Project } = require('../models');
+const { User, Project } = require('../models');
 
 const userData = require('./userData.json');
 const projectData = require('./projectData.json');
@@ -25,4 +23,3 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
-

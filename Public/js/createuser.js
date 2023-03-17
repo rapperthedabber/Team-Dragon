@@ -28,7 +28,6 @@ async function makeUser(event) {
       alert('Failed to create user');
     }
   }
-
 }
 
 createBtn.addEventListener('click', makeUser);

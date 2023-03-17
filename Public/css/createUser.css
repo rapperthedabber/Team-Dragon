@@ -18,6 +18,13 @@
 
 }
 
+
+span {
+    width:200px;
+
+}
+
+
 @media screen and (min-width: 480px) {
    .form-input {
     width: 200px;
@@ -25,8 +32,14 @@
         float:left;
     }
 
-    .formName{
+    .formName {
         width:200px;
+        height: 200px;
          
+    }
+    span {
+        width:200px;
+        height: 200px;
+    
     }
 }
