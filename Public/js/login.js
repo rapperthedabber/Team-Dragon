@@ -16,7 +16,7 @@ async function newUser(event) {
       password: passwordValue,
     };
 
-    const response = await fetch('/api/users/', {
+    const response = await fetch('/api/users/signup', {
       method: 'POST',
       body: JSON.stringify(signUpData),
       headers: { 'Content-Type': 'application/json' },
@@ -25,7 +25,7 @@ async function newUser(event) {
     if (response.ok) {
       document.location.replace('/test');
       alert('sign up successful');
-      console.log(signUpData)
+      console.log(signUpData);
     } else {
       alert('Failed to sign up');
     }
@@ -37,7 +37,6 @@ async function loginUser(event) {
   // username.trim()
   // password.trim()
   event.preventDefault();
-  console.log('you signed up');
   const usernameValue = document.getElementById('username').value.trim();
   const passwordValue = document.getElementById('password').value.trim();
   if (usernameValue && passwordValue) {
@@ -50,16 +49,16 @@ async function loginUser(event) {
     };
 
     const response = await fetch('/api/users/login', {
-      method: 'GET',
       body: JSON.stringify(signUpData),
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
       document.location.replace('/webpage');
-      alert('login successful');
+      console.log('login successful');
     } else {
-      alert('Failed to login');
+      console.log(response);
     }
   }
 }

@@ -18,6 +18,7 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
      <link rel="stylesheet" href="/css/jass.css">
      <link rel="stylesheet" href="/css/createUser.css">
+     <link rel="stylesheet" href = '/css/webpage.css'>
     <title>Document</title>
 </head>
 
@@ -33,8 +34,13 @@
   <li class="nav-item">
     <a class="nav-link" href="#">Profile</a>
   </li>
+  
   <li class="nav-item">
-    <a class="login-signup">Login/SignUp</a>
+    {{#if loggedIn}}
+    <a href="/test">logout</a> |
+    {{else}}
+    <a href = "/login"class="login-signup">Login/SignUp</a>
+    {{/if}}
   </li>
 </ul>
 <!--<form class="form">
@@ -52,16 +58,16 @@
 {{{body}}}
 
 <span>&#9729;</span>
-   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+        {{#if loggedIn}}
         <script src="/js/script.js"></script>
-        <script src = "/js/login.js"></script>
-      
+        {{else}}
+       <script src = "/js/login.js"></script>
+      {{/if}}
+      <script src="/js/webpage.js"></script>
 
 </body>
 
-</html>
-</body>
 </html>

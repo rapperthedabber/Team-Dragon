@@ -7,7 +7,11 @@ const description2 = document.getElementById('description2');
 const description1Half = document.getElementById('description1.5');
 const description2Half = document.getElementById('description2.5');
 
+<<<<<<< HEAD
 function seeProfiles() {
+=======
+async function seeProfiles() {
+>>>>>>> 9658d37cf848787f034fd7d2e883eb76a1cb65ec
   const url = 'https://animechan.vercel.app/api/random';
   fetch(url)
     .then((data) => data.json())
@@ -22,4 +26,25 @@ function seeProfiles() {
     });
 }
 
+<<<<<<< HEAD
 seeProfiles();
+=======
+async function seeName() {
+  const usernameValue = document.getElementById('username').value.trim();
+  const passwordValue = document.getElementById('password').value.trim();
+  const signUpData = {
+    user_name: usernameValue,
+  };
+  const response = await fetch('/api/users/', {
+    method: 'GET',
+    body: JSON.stringify(signUpData),
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (response.ok) {
+    profile1.textContent = JSON.stringify(response);
+  }
+}
+seeProfiles();
+seeName();
+>>>>>>> 9658d37cf848787f034fd7d2e883eb76a1cb65ec

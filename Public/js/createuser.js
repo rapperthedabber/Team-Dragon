@@ -13,7 +13,6 @@ async function makeUser(event) {
       user_name: nameValue,
       password: descriptionValue,
     };
-
     const response = await fetch('/api/users/', {
       method: 'POST',
       body: JSON.stringify(signUpData),
@@ -21,12 +20,12 @@ async function makeUser(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/webpage');
+      document.location.replace('/');
       alert('created user successfully');
       console.log(signUpData);
-    } else {
-      alert('Failed to create user');
     }
+  } else {
+    alert('Failed to create user');
   }
 }
 
