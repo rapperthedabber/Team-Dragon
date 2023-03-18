@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { user, Description } = require('../../models');
 
 router.get('/', async (req, res) => {
   res.render('all');
@@ -12,29 +13,45 @@ router.get('/login', async (req, res) => {
 });
 
 router.get('/webpage', async (req, res) => {
-  res.render('webpage');
-});
-
-router.get('/users', async (req, res) => {
   try {
     const userData = await user.findAll({
       include: [
         {
-          model: user,
-          attributes: ['name'],
+          model: Description,
         },
       ],
     });
 
-    const projects = userData.map((data) => data.get({ plain: true }));
-
+    const users = userData.map((data) => data.get({ plain: true }));
+    console.log(users);
     res.render('webpage', {
-      projects,
+      users,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+// router.get('/users', async (req, res) => {
+//   try {
+//     const userData = await user.findAll({
+//       include: [
+//         {
+//           model: user,
+//         },
+//       ],
+//     });
+
+//     const users = userData.map((data) => data.get({ plain: true }));
+//     console.log(users);
+//     res.render('webpage', {
+//       users,
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;

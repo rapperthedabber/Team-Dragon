@@ -27,6 +27,6 @@ async function goToForm(event) {
   }
 }
 
-login.addEventListener('click', loginUser);
+login.addEventListener('click', goToForm);
 // createUser.addEventListener('click', newUser);
 userLoginSignup.addEventListener('click', goToForm);

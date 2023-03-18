@@ -1,17 +1,16 @@
-const createBtn = document.querySelector('.Create-btn');
+const createForm = document.querySelector('.createUser');
 
-async function makeUser(event) {
+async function makeDescription(event) {
   event.preventDefault();
   console.log('you signed up');
-  const nameValue = document.getElementById('name').value.trim();
+  // const nameValue = document.getElementById('name').value.trim();
   const descriptionValue = document.getElementById('description').value.trim();
-  if (nameValue && descriptionValue) {
+  if (descriptionValue) {
     // Send the e-mail and password to the server
-    console.log({ nameValue, descriptionValue });
+    console.log({ descriptionValue });
 
     const signUpData = {
-      user_name: nameValue,
-      password: descriptionValue,
+      description: descriptionValue,
     };
     const response = await fetch('/api/users/', {
       method: 'POST',
@@ -20,13 +19,13 @@ async function makeUser(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/');
-      alert('created user successfully');
+      document.location.replace('/webpage');
+      // alert('created user successfully');
       console.log(signUpData);
     }
   } else {
-    alert('Failed to create user');
+    alert('Failed to create description!');
   }
 }
 
-createBtn.addEventListener('click', makeUser);
+createForm.addEventListener('submit', makeDescription);

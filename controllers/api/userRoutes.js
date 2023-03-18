@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { json } = require('express');
-const { user } = require('../../models');
+const { user, Description } = require('../../models');
 
 router.post('/signup', async (req, res) => {
   try {
@@ -48,5 +48,15 @@ router.post('/login', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+router.post('/', async (req, res) => {
+  try {
+    const description = await Description.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+    res.json(description);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
 module.exports = router;

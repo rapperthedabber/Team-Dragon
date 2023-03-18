@@ -5,25 +5,27 @@
         <i class="fas fa-plus text-light new-note"></i>
       </div>
     </nav>
+    {{#each users as |user| }}
    <div class="card1">
   <img id = 'duck1' src ="https://i.natgeofe.com/k/327b01e8-be2e-4694-9ae9-ae7837bd8aea/mallard-male-swimming_4x3.jpg" alt="Avatar" style="width:10%">
   <div class="container1">
-    <h4><b id ='profile1'>person1</b></h4>
-    <p id = 'description1'></p>
+   <h4><b id ='profile1'>{{user.user_name}}</b></h4>
+    <p id = 'description1'>{{user.description.description}}</p>
     <p id ='description1.5'></p>
   </div>
 </div>
-<div class="card2">
+{{/each}}
+{{!-- <div class="card2">
   <img src ="https://i.natgeofe.com/k/327b01e8-be2e-4694-9ae9-ae7837bd8aea/mallard-male-swimming_4x3.jpg " id = 'duck2' alt="Avatar" style="width: 10%;">
   <div class="container2">
     <h4><b id="profile2">person2</b></h4>
     <p id = 'description2'>description</p>
     <p id = 'description2.5'></p>
   </div>
-</div>
+</div> --}}
 
-          <textarea class="note-textarea" placeholder="Note Text"></textarea>
-        </div>
+          {{!-- <textarea class="note-textarea" placeholder="Note Text"></textarea>
+        </div> --}}
       </div>
     </div>
   <script src="/js/webpage.js"></script>
