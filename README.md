@@ -5,10 +5,12 @@
  # Description 
 
   This application is a mini social media app inspired by twitter. Users can sign up or login in order to make a post. Also, the application also renders quotes from a anime API in the footer of the website everytime a user reloads the page. Everytime a user logs in, the user is able to see all the users within our database. 
+   ## login page
+   This is the login/authentication screen. The same form can be used to make a new user as well!
   ![image](https://user-images.githubusercontent.com/116526260/226285073-01058c19-f7c1-4a33-bc21-e66896b57076.png)
-  ## this is where users login
+  ## Main web page
+  You can see every single user in our database after you are either logged in or signed up!
 ![image](https://user-images.githubusercontent.com/116526260/226285300-4c3dbe01-c848-42f4-b32d-9709cfc76030.png)
-## you can see other users on this page
 
 
   ## Table of Contents 
