@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { user, Description } = require('../../models');
 
 router.get('/', async (req, res) => {
-  res.render('all', { loggedIn: req.session.loggedIn });
+  res.render('home', { loggedIn: req.session.loggedIn });
 });
 router.get('/test', async (req, res) => {
   res.render('test');
