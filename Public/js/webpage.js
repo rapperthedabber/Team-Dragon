@@ -1,26 +1,25 @@
-const card1 = document.querySelector('.card1');
-const card2 = document.querySelector('card2');
 const profile1 = document.getElementById('profile1');
-const profile2 = document.getElementById('profile2');
-const description1 = document.getElementById('description1');
-const description2 = document.getElementById('description2');
-const description1Half = document.getElementById('description1.5');
-const description2Half = document.getElementById('description2.5');
+const animeText = document.getElementById('animeShow');
+const quoteText = document.getElementById('quote');
 
-// async function seeProfiles() {
-//   const url = 'https://animechan.vercel.app/api/random';
-//   fetch(url)
-//     .then((data) => data.json())
-//     .then((data) => {
-//       console.log(data);
-//       const { anime } = data;
-//       const { quote } = data;
-//       description1.textContent = JSON.stringify(anime);
-//       description1Half.textContent = JSON.stringify(quote);
-//       description2.textContent = JSON.stringify(anime);
-//       description2Half.textContent = JSON.stringify(quote);
-//     });
-// }
+async function seeProfiles() {
+  const url = 'https://animechan.vercel.app/api/random';
+  await fetch(url)
+    .then((data) => data.json())
+    .then((data) => {
+      console.log(data);
+      if (data.anime && data.quote) {
+        // const { anime } = data;
+        // animeText.innerHTML = JSON.stringify(anime);
+        const { quote } = data;
+        const { anime } = data;
+        quoteText.textContent = JSON.stringify(quote);
+        animeText.textContent = JSON.stringify(anime)
+      }
+      //   description2.textContent = JSON.stringify(anime);
+      //   description2Half.textContent = JSON.stringify(quote);
+    });
+}
 
 async function seeName() {
   const usernameValue = document.getElementById('username').value.trim();
@@ -38,5 +37,5 @@ async function seeName() {
     profile1.textContent = JSON.stringify(response);
   }
 }
-// seeProfiles();
+seeProfiles();
 seeName();
