@@ -2,6 +2,19 @@ body {
     background-color: lightskyblue;
     flex-wrap: wrap;
     margin:auto
+    
+}
+
+#animeShow {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#animeShow:hover{
+    font-weight: bold;
+}
+
+#quote:hover{
+    color: red;
 }
 
 .nav{ 
@@ -12,6 +25,7 @@ body {
     margin: 100px;
     margin-bottom: 1em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 
 span {
@@ -19,4 +33,42 @@ span {
   margin-left: 900px;
 }
 
+img {
+    border: solid white;
+}
 
+h1{
+    font-size: 100px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes h1 {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+
+ 

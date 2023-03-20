@@ -7,7 +7,10 @@
     </nav>
     {{#each users as |user| }}
    <div class="card1">
-  <img id = 'duck1' src ="https://i.natgeofe.com/k/327b01e8-be2e-4694-9ae9-ae7837bd8aea/mallard-male-swimming_4x3.jpg" alt="Avatar" style="width:10%">
+    <figure class="image is-128x128">
+  <img class="is-rounded" src="https://i.natgeofe.com/k/327b01e8-be2e-4694-9ae9-ae7837bd8aea/mallard-male-swimming_4x3.jpg">
+</figure>
+  {{!-- <img id = 'duck1' src ="https://i.natgeofe.com/k/327b01e8-be2e-4694-9ae9-ae7837bd8aea/mallard-male-swimming_4x3.jpg" alt="Avatar" style="width:10%"> --}}
   <div class="container1">
    <h4><b id ='profile1'>{{user.user_name}}</b></h4>
     <p id = 'description1'>{{user.description.description}}</p>
@@ -15,6 +18,7 @@
   </div>
 </div>
 {{/each}}
+
 {{!-- <div class="card2">
   <img src ="https://i.natgeofe.com/k/327b01e8-be2e-4694-9ae9-ae7837bd8aea/mallard-male-swimming_4x3.jpg " id = 'duck2' alt="Avatar" style="width: 10%;">
   <div class="container2">
@@ -28,4 +32,5 @@
         </div> --}}
       </div>
     </div>
+   
   {{!-- <script src="/js/webpage.js"></script> --}}
