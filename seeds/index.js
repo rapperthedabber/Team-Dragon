@@ -1,10 +1,9 @@
-
 // const sequelize = require('../config/connection');
 
 // Question if this is on an index file or a Seeds.js file like in the mini project
 
 const sequelize = require('../config/connection');
-const { user /*, Project*/ } = require('../models');
+const { user /* , Project */ } = require('../models');
 
 const userData = require('./userData.json');
 const projectData = require('./projectData.json');
@@ -28,4 +27,3 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
-
