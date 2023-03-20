@@ -1,5 +1,6 @@
 .card1 {
     /* Add shadows to create the "card" effect */
+    border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
@@ -8,8 +9,9 @@
   
   /* On mouse-over, add a deeper shadow */
   .card1:hover {
+    border-radius: 20px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    border: solid white;
+    border: solid white 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   @-webkit-keyframes .card1 {
