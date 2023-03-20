@@ -1,4 +1,4 @@
-# Team-Dragon
+# Team-Dragon(Full-Stack Application)
 ![image](https://user-images.githubusercontent.com/116526260/226284966-3467d693-b604-4421-8d4c-527f792acd00.png)
 
 
